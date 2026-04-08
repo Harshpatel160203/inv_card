@@ -581,13 +581,16 @@ async function submitRSVP(){
     const res = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}`, {
       method:  'POST',
       headers: { 'Authorization':`Bearer ${AIRTABLE_TOKEN}`, 'Content-Type':'application/json' },
-      body: JSON.stringify({ records:[{ fields:{
-        Name:      name,
-        Attending: labels[selectedOption],
-        Guests:    selectedOption === 'no' ? 0 : guestCount,
-        Notes:     document.getElementById('guestNote').value.trim() || '',
-        Submitted: new Date().toISOString().split('T')[0]
-      }}]})
+      body: JSON.stringify({
+        records: [{
+          fields: {
+            "Name":      name,
+            "Attending": labels[selectedOption],
+            "Guests":    selectedOption === 'no' ? 0 : guestCount,
+            "Notes":     document.getElementById('guestNote').value.trim() || '—'
+          }
+        }]
+      })
     });
 
     if(!res.ok){ const e=await res.json(); throw new Error(e.error?.message||'Error'); }
