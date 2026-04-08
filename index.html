@@ -82,12 +82,14 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
 .section-tag{font-family:'Cormorant SC',serif;font-size:7.5px;letter-spacing:0.45em;color:var(--gold-light);margin-bottom:16px;opacity:0.85;display:block;}
 .section-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:26px;color:var(--parchment);margin-bottom:22px;line-height:1.2;}
 
+/* Name input */
 .name-input{width:100%;margin-bottom:14px;background:rgba(247,243,238,0.07);border:0.75px solid rgba(247,243,238,0.2);border-radius:2px;padding:14px 18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--parchment);outline:none;transition:border-color 0.3s ease;display:block;}
 .name-input::placeholder{color:rgba(247,243,238,0.3);}
 .name-input:focus{border-color:rgba(196,168,130,0.6);}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .shake{animation:shake 0.3s ease;}
 
+/* RSVP options */
 .rsvp-options{display:flex;flex-direction:column;gap:10px;}
 .rsvp-option{display:flex;align-items:center;gap:16px;padding:16px 20px;border:0.75px solid rgba(247,243,238,0.2);border-radius:2px;cursor:pointer;transition:all 0.35s cubic-bezier(0.22,1,0.36,1);position:relative;overflow:hidden;background:transparent;width:100%;text-align:left;}
 .rsvp-option::before{content:'';position:absolute;inset:0;background:rgba(247,243,238,0.08);transform:scaleX(0);transform-origin:left;transition:transform 0.35s cubic-bezier(0.22,1,0.36,1);}
@@ -121,6 +123,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
 .conf-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--parchment);margin-bottom:8px;}
 .conf-sub{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--sage-mist);letter-spacing:0.15em;}
 
+/* Info sections */
 .info-row{display:flex;align-items:flex-start;gap:16px;margin-bottom:18px;}
 .info-row:last-child{margin-bottom:0;}
 .info-icon{width:36px;height:36px;border:0.75px solid rgba(196,168,130,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;background:rgba(196,168,130,0.1);}
@@ -158,11 +161,13 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
 
 <canvas id="particle-canvas"></canvas>
 
+<!-- ═══ PAGE 1 — INVITATION ═══ -->
 <section id="page1" class="page">
   <div class="card">
     <div class="card-border"></div>
     <div class="card-border-inner"></div>
 
+    <!-- TOP BOTANICAL -->
     <svg class="botanical-svg botanical-top" viewBox="0 0 440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g class="stem-breathe">
         <path d="M 60 115 Q 100 88 140 62" stroke="#8A9E8C" stroke-width="1.1" stroke-linecap="round"/>
@@ -205,6 +210,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <ellipse cx="416" cy="9" rx="7" ry="3" fill="#8A9E8C" opacity="0.4" transform="rotate(22 416 9)"/>
     </svg>
 
+    <!-- BOTTOM BOTANICAL -->
     <svg class="botanical-svg botanical-bottom" viewBox="0 0 440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g class="stem-breathe">
         <path d="M 60 115 Q 100 88 140 62" stroke="#8A9E8C" stroke-width="1.1" stroke-linecap="round"/>
@@ -231,6 +237,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </g>
     </svg>
 
+    <!-- SIDE BOTANICALS -->
     <svg class="botanical-svg botanical-left" viewBox="0 0 60 280" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M 50 20 Q 30 80 35 140 Q 30 200 50 260" stroke="#BDB5A6" stroke-width="0.7" stroke-linecap="round" opacity="0.5" class="stem-breathe"/>
       <g class="leaf-sway-1">
@@ -250,6 +257,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </g>
     </svg>
 
+    <!-- TEXT CONTENT -->
     <p class="eyebrow anim-0">Please Join Us to Celebrate</p>
     <h1 class="headline anim-1">A Little Wild One</h1>
     <h2 class="subheadline anim-2">is on the Way</h2>
@@ -258,11 +266,11 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <span class="divider-gem"></span>
       <span class="divider-line line-anim line-anim-2"></span>
     </div>
-    <p class="celebrating-label anim-3">Celebrating & Honoring</p>
+    <p class="celebrating-label anim-3">Celebrating &amp; Honoring</p>
     <h3 class="honoree-name anim-4">Emma Rose Sullivan</h3>
     <div style="height:1px;background:rgba(189,181,166,0.3);margin:4px 30px 16px;" class="anim-4"></div>
     <div class="anim-5">
-      <p class="detail-label">Date & Time</p>
+      <p class="detail-label">Date &amp; Time</p>
       <p class="detail-value">Saturday, the Fourteenth of June, 2025</p>
       <p class="detail-sub">Two O'Clock in the Afternoon</p>
     </div>
@@ -273,7 +281,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
     </div>
     <div class="rsvp-nudge anim-7">
       <p>Kindly reply by June 1st, 2025</p>
-      <button class="rsvp-btn" onclick="scrollToPage2()"><span>RSVP & Details ↓</span></button>
+      <button class="rsvp-btn" onclick="scrollToPage2()"><span>RSVP &amp; Details ↓</span></button>
     </div>
   </div>
 
@@ -283,6 +291,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
   </div>
 </section>
 
+<!-- ═══ PAGE 2 — RSVP & INFO ═══ -->
 <section id="page2" class="page">
   <div class="ambient-circle" style="width:300px;height:300px;top:-80px;left:-100px;background:radial-gradient(circle,rgba(138,158,140,0.12),transparent 70%);--tx:20px;--ty:30px;animation-duration:8s;"></div>
   <div class="ambient-circle" style="width:250px;height:250px;bottom:-60px;right:-80px;background:radial-gradient(circle,rgba(196,168,130,0.1),transparent 70%);--tx:-15px;--ty:-20px;animation-duration:10s;animation-delay:2s;"></div>
@@ -295,6 +304,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <div class="p2-divider"><span></span><i></i><span></span></div>
     </div>
 
+    <!-- RSVP -->
     <div class="info-section">
       <span class="section-tag">Your Response</span>
       <h3 class="section-title">Will you be joining us?</h3>
@@ -352,6 +362,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </div>
     </div>
 
+    <!-- EVENT DETAILS -->
     <div class="info-section">
       <span class="section-tag">Event Details</span>
       <div class="info-row">
@@ -367,16 +378,17 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
         <div>
           <span class="info-label">Schedule</span>
           <div class="timeline" style="margin-top:8px;">
-            <div class="timeline-item"><span class="timeline-time">1:30 PM</span><span class="timeline-event">Guests arrive & welcome drinks</span></div>
+            <div class="timeline-item"><span class="timeline-time">1:30 PM</span><span class="timeline-event">Guests arrive &amp; welcome drinks</span></div>
             <div class="timeline-item"><span class="timeline-time">2:00 PM</span><span class="timeline-event">Shower celebration begins</span></div>
-            <div class="timeline-item"><span class="timeline-time">3:00 PM</span><span class="timeline-event">Garden brunch & games</span></div>
-            <div class="timeline-item"><span class="timeline-time">4:00 PM</span><span class="timeline-event">Gift opening & cake</span></div>
-            <div class="timeline-item" style="padding-bottom:0;"><span class="timeline-time">5:00 PM</span><span class="timeline-event">Farewell & safe travels</span></div>
+            <div class="timeline-item"><span class="timeline-time">3:00 PM</span><span class="timeline-event">Garden brunch &amp; games</span></div>
+            <div class="timeline-item"><span class="timeline-time">4:00 PM</span><span class="timeline-event">Gift opening &amp; cake</span></div>
+            <div class="timeline-item" style="padding-bottom:0;"><span class="timeline-time">5:00 PM</span><span class="timeline-event">Farewell &amp; safe travels</span></div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- LOCATION & MAP -->
     <div class="info-section">
       <span class="section-tag">Location</span>
       <div class="info-row" style="margin-bottom:12px;">
@@ -395,9 +407,10 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
         <div>
           <span class="info-label">Parking</span>
           <span class="info-value" style="font-size:14px;">Complimentary valet available</span>
-          <span class="info-note">Self-parking also available on Garden Lane & side streets</span>
+          <span class="info-note">Self-parking also available on Garden Lane &amp; side streets</span>
         </div>
       </div>
+      <!-- OpenStreetMap — free, no API key, always renders -->
       <div class="map-frame">
         <iframe
           src="https://www.openstreetmap.org/export/embed.html?bbox=-97.7631%2C30.2472%2C-97.7231%2C30.2872&layer=mapnik&marker=30.2672%2C-97.7431"
@@ -409,6 +422,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </div>
     </div>
 
+    <!-- WHAT TO EXPECT -->
     <div class="info-section">
       <span class="section-tag">What to Expect</span>
       <div class="info-row">
@@ -416,9 +430,9 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
         <div>
           <span class="info-label">Dress Code</span>
           <span class="info-value">Garden Chic</span>
-          <span class="info-note">Florals, soft linens & pastels encouraged · Heels not recommended</span>
+          <span class="info-note">Florals, soft linens &amp; pastels encouraged · Heels not recommended</span>
           <div class="tag-row">
-            <span class="tag">Sage & Earthy Tones</span>
+            <span class="tag">Sage &amp; Earthy Tones</span>
             <span class="tag">Floral Prints</span>
             <span class="tag">Soft Linen</span>
           </div>
@@ -429,7 +443,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
         <div>
           <span class="info-label">Menu</span>
           <span class="info-value" style="font-size:14px;">Garden Brunch Spread</span>
-          <span class="info-note">Fresh pastries, fruit & mimosas · Note dietary needs when RSVPing</span>
+          <span class="info-note">Fresh pastries, fruit &amp; mimosas · Note dietary needs when RSVPing</span>
         </div>
       </div>
       <div class="info-row" style="margin-bottom:0;">
@@ -437,7 +451,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
         <div>
           <span class="info-label">Registry</span>
           <span class="info-value" style="font-size:14px;">Your presence is the greatest gift</span>
-          <span class="info-note">Registry at Pottery Barn Kids & Amazon · Links sent via email</span>
+          <span class="info-note">Registry at Pottery Barn Kids &amp; Amazon · Links sent via email</span>
           <div class="tag-row">
             <span class="tag">Pottery Barn Kids</span>
             <span class="tag">Amazon Registry</span>
@@ -446,14 +460,15 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </div>
     </div>
 
+    <!-- CONTACT -->
     <div class="info-section" style="margin-bottom:0;">
       <span class="section-tag">Questions?</span>
       <div class="info-row" style="margin-bottom:0;">
         <div class="info-icon">💬</div>
         <div>
           <span class="info-label">Hosted by</span>
-          <span class="info-value" style="font-size:15px;">Sarah & Michelle Sullivan</span>
-          <span class="info-note" style="margin-top:4px;">sullivan@email.com · (555) 012-3456</span>
+          <span class="info-value" style="font-size:15px;">Sarah &amp; Michelle Sullivan</span>
+          <span class="info-note" style="margin-top:4px;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8a0ada4a4a788ada5a5a9bbbba0a7bfadbae6aba7a5">[email&#160;protected]</a> · (555) 012-3456</span>
         </div>
       </div>
     </div>
@@ -461,7 +476,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
   </div>
 </section>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── AIRTABLE CONFIG ──
 const AIRTABLE_TOKEN = 'patJj0YU6gIesGf4N.4f5f8a97554a552823f2ee11387b92303a0dc3cdbd09e35517b89be37b7fe977';
 const BASE_ID        = 'apprZvoV7VQImiqPd';
@@ -524,24 +539,25 @@ for(let i=0;i<12;i++) setTimeout(createLeaf,i*1200);
 setInterval(createLeaf,3000);
 
 // ── RSVP ──
-let selectedOptionType = null;
-let guestCountValue = 1;
+let selectedOption = null;
+let guestCount = 1;
 
 function selectOption(btn, type){
   document.querySelectorAll('.rsvp-option').forEach(o=>o.classList.remove('selected'));
   btn.classList.add('selected');
-  selectedOptionType = type;
+  selectedOption = type;
   document.getElementById('guestRow').style.display  = (type==='yes'||type==='maybe') ? 'flex' : 'none';
   document.getElementById('noteRow').style.display   = 'block';
   document.getElementById('submitRow').style.display = 'block';
 }
 
 function changeCount(delta){
-  guestCountValue = Math.max(1, Math.min(10, guestCountValue+delta));
-  document.getElementById('guestCount').textContent = guestCountValue;
+  guestCount = Math.max(1, Math.min(10, guestCount+delta));
+  document.getElementById('guestCount').textContent = guestCount;
 }
 
 async function submitRSVP(){
+  // Validate name
   const nameEl = document.getElementById('guestName');
   const name   = nameEl.value.trim();
   if(!name){
@@ -552,7 +568,7 @@ async function submitRSVP(){
     setTimeout(()=>nameEl.classList.remove('shake'), 400);
     return;
   }
-  if(!selectedOptionType) return;
+  if(!selectedOption) return;
 
   const btn = document.getElementById('submitBtn');
   btn.textContent = 'Sending…';
@@ -562,35 +578,41 @@ async function submitRSVP(){
 
   try {
     const TABLE_ID = 'tblnbV5IveARCkOP2';
-    const note      = document.getElementById('guestNote').value.trim();
-    const message   = [
-      'Attending: ' + labels[selectedOptionType],
-      'Guests: '    + (selectedOptionType==='no' ? 0 : guestCountValue),
-      'Note: '      + (note || '—'),
-      'Date: '      + new Date().toLocaleDateString('en-US')
-    ].join(' | ');
-
     const res = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}`, {
       method:  'POST',
       headers: { 'Authorization':`Bearer ${AIRTABLE_TOKEN}`, 'Content-Type':'application/json' },
       body: JSON.stringify({ records:[{ fields:{
-        Name:  name,
-        Notes: message
+        Name:      name,
+        Attending: labels[selectedOption],
+        Guests:    selectedOption === 'no' ? 0 : guestCount,
+        Notes:     document.getElementById('guestNote').value.trim() || '',
+        Submitted: new Date().toISOString().split('T')[0]
       }}]})
     });
 
     if(!res.ok){ const e=await res.json(); throw new Error(e.error?.message||'Error'); }
 
+    // Hide form
     ['guestName','rsvpOptions','guestRow','noteRow','submitRow'].forEach(id=>{
       document.getElementById(id).style.display='none';
     });
 
+    // Show confirmation
     const firstName = name.split(' ')[0];
     document.getElementById('confSub').textContent =
-      selectedOptionType==='no'
+      selectedOption==='no'
         ? `We'll miss you dearly, ${firstName}. Sending love your way 💚`
         : `We've saved your RSVP, ${firstName}. Cannot wait to celebrate! 🌿`;
     document.getElementById('confirmation').classList.add('show');
+
+    // Confetti
+    for(let i=0;i<25;i++) setTimeout(()=>{
+      const p=new Particle();
+      p.x=W/2+(Math.random()-0.5)*120; p.y=H*0.65;
+      p.speedY=-(Math.random()*2.5+1); p.speedX=(Math.random()-0.5)*2.5;
+      p.maxOpacity=0.9; p.size=Math.random()*3+1;
+      particles.push(p);
+    }, i*40);
 
   } catch(err){
     console.error(err);
@@ -599,6 +621,7 @@ async function submitRSVP(){
   }
 }
 
+// ── COPY ADDRESS ──
 function copyAddress(){
   navigator.clipboard.writeText('123 Garden Lane, Austin, TX 78701').then(()=>{
     const btn=document.getElementById('copyBtn'), text=document.getElementById('copyBtnText');
@@ -607,8 +630,14 @@ function copyAddress(){
   });
 }
 
-function openMaps(){ window.open('https://maps.google.com/?q=123+Garden+Lane+Austin+TX'); }
+// ── MAPS ──
+function openMaps(){ window.open('https://www.google.com/maps/search/?api=1&query=123+Garden+Lane+Austin+TX','_blank'); }
+
+// ── SCROLL ──
 function scrollToPage2(){ document.getElementById('page2').scrollIntoView({behavior:'smooth'}); }
-</script>
-</body>
-</html>
+
+// ── SCROLL-IN ANIMATION ──
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }});
+},{threshold:0.1});
+document.querySelectorAll('.info-section').forEach((el
