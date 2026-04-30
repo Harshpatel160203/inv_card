@@ -159,25 +159,13 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
 </head>
 <body>
 
-
-<!-- Hidden Netlify Form — captures all submissions server-side -->
-<form name="rsvp" netlify netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="rsvp" />
-  <input type="hidden" name="bot-field" />
-  <input name="Name" />
-  <input name="Attending" />
-  <input name="Guests" />
-  <input name="Notes" />
-</form>
 <canvas id="particle-canvas"></canvas>
 
-<!-- ═══ PAGE 1 — INVITATION ═══ -->
 <section id="page1" class="page">
   <div class="card">
     <div class="card-border"></div>
     <div class="card-border-inner"></div>
 
-    <!-- TOP BOTANICAL -->
     <svg class="botanical-svg botanical-top" viewBox="0 0 440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g class="stem-breathe">
         <path d="M 60 115 Q 100 88 140 62" stroke="#8A9E8C" stroke-width="1.1" stroke-linecap="round"/>
@@ -220,7 +208,6 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <ellipse cx="416" cy="9" rx="7" ry="3" fill="#8A9E8C" opacity="0.4" transform="rotate(22 416 9)"/>
     </svg>
 
-    <!-- BOTTOM BOTANICAL -->
     <svg class="botanical-svg botanical-bottom" viewBox="0 0 440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g class="stem-breathe">
         <path d="M 60 115 Q 100 88 140 62" stroke="#8A9E8C" stroke-width="1.1" stroke-linecap="round"/>
@@ -247,7 +234,6 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </g>
     </svg>
 
-    <!-- SIDE BOTANICALS -->
     <svg class="botanical-svg botanical-left" viewBox="0 0 60 280" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M 50 20 Q 30 80 35 140 Q 30 200 50 260" stroke="#BDB5A6" stroke-width="0.7" stroke-linecap="round" opacity="0.5" class="stem-breathe"/>
       <g class="leaf-sway-1">
@@ -267,7 +253,6 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </g>
     </svg>
 
-    <!-- TEXT CONTENT -->
     <p class="eyebrow anim-0">Please Join Us to Celebrate</p>
     <h1 class="headline anim-1">A Little Wild One</h1>
     <h2 class="subheadline anim-2">is on the Way</h2>
@@ -276,11 +261,11 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <span class="divider-gem"></span>
       <span class="divider-line line-anim line-anim-2"></span>
     </div>
-    <p class="celebrating-label anim-3">Celebrating &amp; Honoring</p>
+    <p class="celebrating-label anim-3">Celebrating & Honoring</p>
     <h3 class="honoree-name anim-4">Emma Rose Sullivan</h3>
     <div style="height:1px;background:rgba(189,181,166,0.3);margin:4px 30px 16px;" class="anim-4"></div>
     <div class="anim-5">
-      <p class="detail-label">Date &amp; Time</p>
+      <p class="detail-label">Date & Time</p>
       <p class="detail-value">Saturday, the Fourteenth of June, 2025</p>
       <p class="detail-sub">Two O'Clock in the Afternoon</p>
     </div>
@@ -291,7 +276,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
     </div>
     <div class="rsvp-nudge anim-7">
       <p>Kindly reply by June 1st, 2025</p>
-      <button class="rsvp-btn" id="scrollBtn"><span>RSVP &amp; Details ↓</span></button>
+      <button class="rsvp-btn" id="scrollBtn"><span>RSVP & Details ↓</span></button>
     </div>
   </div>
 
@@ -301,7 +286,6 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
   </div>
 </section>
 
-<!-- ═══ PAGE 2 — RSVP & INFO ═══ -->
 <section id="page2" class="page">
   <div class="ambient-circle" style="width:300px;height:300px;top:-80px;left:-100px;background:radial-gradient(circle,rgba(138,158,140,0.12),transparent 70%);--tx:20px;--ty:30px;animation-duration:8s;"></div>
   <div class="ambient-circle" style="width:250px;height:250px;bottom:-60px;right:-80px;background:radial-gradient(circle,rgba(196,168,130,0.1),transparent 70%);--tx:-15px;--ty:-20px;animation-duration:10s;animation-delay:2s;"></div>
@@ -314,7 +298,6 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <div class="p2-divider"><span></span><i></i><span></span></div>
     </div>
 
-    <!-- RSVP -->
     <div class="info-section">
       <span class="section-tag">Your Response</span>
       <h3 class="section-title">Will you be joining us?</h3>
@@ -362,7 +345,7 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </div>
 
       <div id="submitRow" style="display:none;">
-        <button class="submit-btn" id="submitBtn" id="submitBtn">Send My RSVP ✦</button>
+        <button class="submit-btn" id="submitBtn">Send My RSVP ✦</button>
       </div>
 
       <div class="confirmation" id="confirmation">
@@ -372,7 +355,6 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       </div>
     </div>
 
-    <!-- EVENT DETAILS -->
     <div class="info-section">
       <span class="section-tag">Event Details</span>
       <div class="info-row">
@@ -388,17 +370,16 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
         <div>
           <span class="info-label">Schedule</span>
           <div class="timeline" style="margin-top:8px;">
-            <div class="timeline-item"><span class="timeline-time">1:30 PM</span><span class="timeline-event">Guests arrive &amp; welcome drinks</span></div>
+            <div class="timeline-item"><span class="timeline-time">1:30 PM</span><span class="timeline-event">Guests arrive & welcome drinks</span></div>
             <div class="timeline-item"><span class="timeline-time">2:00 PM</span><span class="timeline-event">Shower celebration begins</span></div>
-            <div class="timeline-item"><span class="timeline-time">3:00 PM</span><span class="timeline-event">Garden brunch &amp; games</span></div>
-            <div class="timeline-item"><span class="timeline-time">4:00 PM</span><span class="timeline-event">Gift opening &amp; cake</span></div>
-            <div class="timeline-item" style="padding-bottom:0;"><span class="timeline-time">5:00 PM</span><span class="timeline-event">Farewell &amp; safe travels</span></div>
+            <div class="timeline-item"><span class="timeline-time">3:00 PM</span><span class="timeline-event">Garden brunch & games</span></div>
+            <div class="timeline-item"><span class="timeline-time">4:00 PM</span><span class="timeline-event">Gift opening & cake</span></div>
+            <div class="timeline-item" style="padding-bottom:0;"><span class="timeline-time">5:00 PM</span><span class="timeline-event">Farewell & safe travels</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- LOCATION & MAP -->
     <div class="info-section">
       <span class="section-tag">Location</span>
       <div class="info-row" style="margin-bottom:12px;">
@@ -415,93 +396,75 @@ body{background:var(--parchment-dark);font-family:'DM Sans',sans-serif;overflow-
       <div class="info-row" style="margin-bottom:12px;">
         <div class="info-icon">🚗</div>
         <div>
-         async function submitRSVP(){
-  // Validate name
-  var nameEl = document.getElementById('guestName');
-  var name   = nameEl.value.trim();
-  if(!name){
-    nameEl.classList.add('shake');
-    nameEl.style.borderColor = 'rgba(196,168,130,0.9)';
-    nameEl.placeholder = 'Please enter your name first…';
-    nameEl.focus();
-    setTimeout(function(){ nameEl.classList.remove('shake'); }, 400);
-    return;
-  }
-  if(!selectedOption) return;
+          <span class="info-label">Parking</span>
+          <span class="info-value" style="font-size:14px;">Complimentary valet available</span>
+          <span class="info-note">Self-parking also available on Garden Lane & side streets</span>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-97.7631%2C30.2472%2C-97.7231%2C30.2872&layer=mapnik&marker=30.2672%2C-97.7431"
+          allowfullscreen=""
+          loading="lazy"
+          title="Venue location">
+        </iframe>
+        <button class="map-overlay-btn" id="mapsBtn">Open in Maps ↗</button>
+      </div>
+    </div>
 
-  var btn = document.getElementById('submitBtn');
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
+    <div class="info-section">
+      <span class="section-tag">What to Expect</span>
+      <div class="info-row">
+        <div class="info-icon">👗</div>
+        <div>
+          <span class="info-label">Dress Code</span>
+          <span class="info-value">Garden Chic</span>
+          <span class="info-note">Florals, soft linens & pastels encouraged · Heels not recommended</span>
+          <div class="tag-row">
+            <span class="tag">Sage & Earthy Tones</span>
+            <span class="tag">Floral Prints</span>
+            <span class="tag">Soft Linen</span>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🍽️</div>
+        <div>
+          <span class="info-label">Menu</span>
+          <span class="info-value" style="font-size:14px;">Garden Brunch Spread</span>
+          <span class="info-note">Fresh pastries, fruit & mimosas · Note dietary needs when RSVPing</span>
+        </div>
+      </div>
+      <div class="info-row" style="margin-bottom:0;">
+        <div class="info-icon">🎁</div>
+        <div>
+          <span class="info-label">Registry</span>
+          <span class="info-value" style="font-size:14px;">Your presence is the greatest gift</span>
+          <span class="info-note">Registry at Pottery Barn Kids & Amazon · Links sent via email</span>
+          <div class="tag-row">
+            <span class="tag">Pottery Barn Kids</span>
+            <span class="tag">Amazon Registry</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  var labels = { yes:'Joyfully Accepts', maybe:'Will Try to Make It', no:'Sends Love from Afar' };
-  var note   = document.getElementById('guestNote').value.trim() || '—';
-
-  try {
-    // Replace the URL below with your actual Formspree Endpoint
-    var res = await fetch('https://formspree.io/f/mrejgale', {
-      method: 'POST',
-      headers: { 
-        'Accept': 'application/json',
-        'Content-Type': 'application/json' 
-      },
-      body: JSON.stringify({
-        Name: name,
-        Attending: labels[selectedOption],
-        Guests: selectedOption === 'no' ? '0' : String(guestCount),
-        Notes: note
-      })
-    });
-
-    if(!res.ok) throw new Error('Form error: ' + res.status);
-
-    // Hide form elements
-    ['guestName','rsvpOptions','guestRow','noteRow','submitRow'].forEach(function(id){
-      var el = document.getElementById(id);
-      if(el) el.style.display = 'none';
-    });
-
-    // Show personalised confirmation
-    var firstName = name.split(' ')[0];
-    document.getElementById('confSub').textContent =
-      selectedOption === 'no'
-        ? "We'll miss you dearly, " + firstName + ". Sending love your way 💚"
-        : "We've saved your RSVP, " + firstName + ". Cannot wait to celebrate! 🌿";
-    document.getElementById('confirmation').classList.add('show');
-
-    // Confetti burst logic remains the same
-    for(var i=0; i<25; i++){
-      (function(delay){
-        setTimeout(function(){
-          var p = new Particle();
-          p.x = W/2 + (Math.random()-0.5)*120;
-          p.y = H*0.65;
-          p.speedY = -(Math.random()*2.5+1);
-          p.speedX = (Math.random()-0.5)*2.5;
-          p.maxOpacity = 0.9;
-          p.size = Math.random()*3+1;
-          particles.push(p);
-        }, delay);
-      })(i*40);
-    }
-
-  } catch(err){
-    console.error('Submission error:', err);
-    btn.textContent = '⚠ Something went wrong — try again';
-    btn.disabled = false;
-  }
-}
+    <div class="info-section" style="margin-bottom:0;">
+      <span class="section-tag">Questions?</span>
+      <div class="info-row" style="margin-bottom:0;">
+        <div class="info-icon">💬</div>
+        <div>
+          <span class="info-label">Hosted by</span>
+          <span class="info-value" style="font-size:15px;">Sarah & Michelle Sullivan</span>
+          <span class="info-note" style="margin-top:4px;">sullivan.rsvp@example.com · (555) 012-3456</span>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false">
-// ── AIRTABLE CONFIG ──
-const AIRTABLE_TOKEN = 'patJj0YU6gIesGf4N.4f5f8a97554a552823f2ee11387b92303a0dc3cdbd09e35517b89be37b7fe977';
-const BASE_ID        = 'apprZvoV7VQImiqPd';
-const TABLE_NAME     = 'RSVPs';
-
+<script>
 // ── PARTICLE SYSTEM ──
 const canvas = document.getElementById('particle-canvas');
 const ctx    = canvas.getContext('2d');
@@ -577,7 +540,6 @@ function changeCount(delta){
 }
 
 async function submitRSVP(){
-  // Validate name
   var nameEl = document.getElementById('guestName');
   var name   = nameEl.value.trim();
   if(!name){
@@ -597,30 +559,28 @@ async function submitRSVP(){
   var labels = { yes:'Joyfully Accepts', maybe:'Will Try to Make It', no:'Sends Love from Afar' };
   var note   = document.getElementById('guestNote').value.trim() || '—';
 
-  // Submit via Netlify Forms using URLSearchParams (works on all browsers/WebViews)
-  var params = new URLSearchParams();
-  params.append('form-name', 'rsvp');
-  params.append('Name',      name);
-  params.append('Attending', labels[selectedOption]);
-  params.append('Guests',    selectedOption === 'no' ? '0' : String(guestCount));
-  params.append('Notes',     note);
-
   try {
-    var res = await fetch('/', {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body:    params.toString()
+    var res = await fetch('https://formspree.io/f/mrejgale', {
+      method: 'POST',
+      headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+      },
+      body: JSON.stringify({
+        Name: name,
+        Attending: labels[selectedOption],
+        Guests: selectedOption === 'no' ? '0' : String(guestCount),
+        Notes: note
+      })
     });
 
     if(!res.ok) throw new Error('Form error: ' + res.status);
 
-    // Hide form elements
     ['guestName','rsvpOptions','guestRow','noteRow','submitRow'].forEach(function(id){
       var el = document.getElementById(id);
       if(el) el.style.display = 'none';
     });
 
-    // Show personalised confirmation
     var firstName = name.split(' ')[0];
     document.getElementById('confSub').textContent =
       selectedOption === 'no'
@@ -628,7 +588,6 @@ async function submitRSVP(){
         : "We've saved your RSVP, " + firstName + ". Cannot wait to celebrate! 🌿";
     document.getElementById('confirmation').classList.add('show');
 
-    // Confetti burst
     for(var i=0; i<25; i++){
       (function(delay){
         setTimeout(function(){
@@ -643,7 +602,6 @@ async function submitRSVP(){
         }, delay);
       })(i*40);
     }
-
   } catch(err){
     console.error('Submission error:', err);
     btn.textContent = '⚠ Something went wrong — try again';
@@ -651,67 +609,25 @@ async function submitRSVP(){
   }
 }
 
-// ── COPY ADDRESS ──
-window.copyAddress = function(){
-  navigator.clipboard.writeText('123 Garden Lane, Austin, TX 78701').then(()=>{
-    const btn=document.getElementById('copyBtn'), text=document.getElementById('copyBtnText');
-    btn.classList.add('copied'); text.textContent='✓ Copied!';
-    setTimeout(()=>{ btn.classList.remove('copied'); text.textContent='Copy Address'; },2500);
-  });
-}
-
-// ── MAPS ──
-window.openMaps = function(){ window.open('https://www.google.com/maps/search/?api=1&query=123+Garden+Lane+Austin+TX','_blank'); }
-
-// ── SCROLL ──
-window.scrollToPage2 = function(){ document.getElementById('page2').scrollIntoView({behavior:'smooth'}); }
-
-// ── SCROLL-IN ANIMATION ──
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }});
-},{threshold:0.1});
-document.querySelectorAll('.info-section').forEach(function(el, i){
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.7s ease ' + (i*0.12) + 's, transform 0.7s cubic-bezier(0.22,1,0.36,1) ' + (i*0.12) + 's';
-  observer.observe(el);
-});
-
-// ── ALL CLICK HANDLERS via addEventListener (Cloudflare-safe) ──
+// ── EVENT LISTENERS ──
 document.addEventListener('DOMContentLoaded', function(){
-
-  // RSVP option buttons
   document.querySelectorAll('[data-rsvp]').forEach(function(btn){
     btn.addEventListener('click', function(){ selectOption(this, this.dataset.rsvp); });
   });
 
-  // Guest counter
-  var cd = document.getElementById('countDown');
-  var cu = document.getElementById('countUp');
-  if(cd) cd.addEventListener('click', function(){ changeCount(-1); });
-  if(cu) cu.addEventListener('click', function(){ changeCount(1); });
+  document.getElementById('countDown').addEventListener('click', function(){ changeCount(-1); });
+  document.getElementById('countUp').addEventListener('click', function(){ changeCount(1); });
+  document.getElementById('submitBtn').addEventListener('click', function(){ submitRSVP(); });
 
-  // Submit RSVP
-  var sb = document.getElementById('submitBtn');
-  if(sb) sb.addEventListener('click', function(){ submitRSVP(); });
-
-  // Scroll to page 2 — handle multiple buttons with this id
-  document.querySelectorAll('#scrollBtn').forEach(function(b){
+  document.querySelectorAll('#scrollBtn, .scroll-indicator').forEach(function(b){
     b.addEventListener('click', function(){
       document.getElementById('page2').scrollIntoView({behavior:'smooth'});
     });
   });
 
-  // Scroll indicator arrow
-  var si = document.querySelector('.scroll-indicator');
-  if(si) si.addEventListener('click', function(){
-    document.getElementById('page2').scrollIntoView({behavior:'smooth'});
-  });
-
-  // Copy address
-  var cb = document.getElementById('copyBtn');
-  if(cb) cb.addEventListener('click', function(){
+  document.getElementById('copyBtn').addEventListener('click', function(){
     navigator.clipboard.writeText('123 Garden Lane, Austin, TX 78701').then(function(){
+      const cb = document.getElementById('copyBtn');
       cb.classList.add('copied');
       document.getElementById('copyBtnText').textContent = '✓ Copied!';
       setTimeout(function(){
@@ -721,12 +637,19 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // Open maps
-  var mb = document.getElementById('mapsBtn');
-  if(mb) mb.addEventListener('click', function(){
-    window.open('https://www.google.com/maps/search/?api=1&query=123+Garden+Lane+Austin+TX','_blank');
+  document.getElementById('mapsBtn').addEventListener('click', function(){
+    window.open('https://www.google.com/maps/search/?api=1&query=123+Garden+Lane+Austin+TX+78701');
   });
 
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }});
+  },{threshold:0.1});
+  document.querySelectorAll('.info-section').forEach(function(el, i){
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.7s ease ' + (i*0.12) + 's, transform 0.7s cubic-bezier(0.22,1,0.36,1) ' + (i*0.12) + 's';
+    observer.observe(el);
+  });
 });
 </script>
 </body>
